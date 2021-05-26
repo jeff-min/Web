@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web - 01 - HTML </title>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+            
+        <h1>문서의 구조와 슈퍼스타들</h1>
+        <h3>head / body / title / meta / </h3>
+        <p>
+            title태그를 통해 
+        <br>웹페이지에 제목을 사용자에게 명시적으로 알려줄 수 있고
+        <br>검색엔진과 같은 기계들은 title 이라는 것을 책으로 치면 책 표지와 같은 정보로 사용
+        <br>그렇기 때문에 정보가 중요하듯이 말한거 처럼 title 을 쓰지 않으면 굉장히 손해이다.
+        </p>
+    
+        <!-- <meta charset="utf-8"> -->
+        <p>
+            meta charset="utf-8"
+        <br>"문자를 utf-8로 읽어라" 라고 브라우저한테 얘기해줌
+        </p>
+        <p>
+            본문은 body 라는 태그로 묶기로 약속 했다. 약속약속"
+        <br>본문을 설명하는 즉) body 를 설명하는 태그는 head 태그로 묶기로 약속 했다. 약속약속"
+        </p>
+    
+        <!-- 윗 코드는 본문을 설명함-->
+            <!-- # 즉) <title>태그는 본문의 제목이 무엇인지를 설명하고 있고
+                #     <meta charset="utf-8> 이라는 것은   이본문이 utf-8이라는 방식으로 저장되어 있다 라는걸 설명.
+                #     본문은 body 라는 태그로 묶기로 약속 했다. 약속약속"
+                #     본문을 설명하는 즉) body 를 설명하는 태그는 <head> 태그로 묶기로 약속 했다. 약속약속"
+                #     이로써 모든 태그들은 head 와 body 태그에 놓이게 되는데 더위에 있는 고위층 태그가 html이며 모든 태그는 html 태그 위에 놓인다
+                #     <!DOCTYPE html>사용은     이 문서는 html 이다.라는 뜻에서    관용적(습관적)으로 써준다-->
+    
+        <!-- 아래 코드는 본문 입니다. -->
+        <hr>
+        <h3>br 태그</h3>
+        Definition and Usage
+        The html tag represents the root of an HTML document.
+        The html tag is the container for all other HTML elements (except for the !DOCTYPE tag).
+        <br>
+        <br>
+        <br>
+        The HTML p element defines a paragraph.
+        A paragraph always starts on a new line, and browsers automatically add some white space (a margin) before and after a paragraph.\
+        <br>
+        <br>
+        <h3>p 태그</h3>
+        <p>Definition and Usage
+            The html tag represents the root of an HTML document.
+            The html tag is the container for all other HTML elements (except for the !DOCTYPE tag).
+        </p>
+        <p style="margin-top:40px ;">
+            The HTML p element defines a paragraph.
+            A paragraph always starts on a new line, and browsers automatically add some white space (a margin) before and after a paragraph.
+        </p>
+        <hr>
+    
+        <h1>
+            html paragraph tag p 태그
+        </h1>
+        <h3>p tag VS br tag</h3>
+        <p>
+            웹페이지를 좀 더 정보로서 가치 있게 만든다.
+            내가 선택한만큼 단락을 구분하고 의미론적으로 표현해 줄 수 있기 떄문.
+            <br>
+            [br 태그는 그저 줄 바꿈일 뿐이다.]
+            <br>
+            <br>
+            단/ p 태그는 정해져 있는 여백만큼 벌어진다.
+            그걸 css 로 조정 할 수 있으니 . p태그를 선택하는게 현명함.
+        </p>
+        <p>
+            CSS 태그 margin 은 태그와 태그 사이의 여백을 나타냄 
+        </p>
+        <hr>
+    
+        <img src="coding.jpg" alt="test.img" style="width: 100%;">
+        <h1>img 태그를 통한 속성알기</h1>
+        <p>
+            img src ="coding.jpg"   width="100%"    alt= "test.img"
+            <br>
+            에서 속성(Attribute)이란 src =  width=  alt=    를 의미하며 
+            <br>태그가 태그의 이름만으로는 정보가 부족할 때 이런 속성을 통해서 더 많은 의미를 부가할 수 있게 되는 것이다.
+        </p>
+    
+        <hr>
+        <h1>부모자식과 목록</h1>
+    
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <br>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+    
+    
+        <p> 
+            (list) li 같은 항목들은 그 항목이 어디서부터 어디까지가 서로 연관된 항목인지를 경계 짓기 위한,
+        <br>그룹핑 하기 위한 부모 태그가 필요한 것.
+        <br>
+        <br>
+        즉) 부모태그와 자식태그를 항상 가지고 쓰이는 태그들이 종종 있다.
+        </p>
+        <ul><!-- Unordered List -->
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <ol><!-- Ordered List -->
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ol> 
+
+        <hr>
+        <h1>Hyper Text 를 의미하는 a 태그 (링크)</h1>
+        <p>
+            <a href="https://www.w3schools.com/html/html_intro.asp" target="_blank" title="html5 sepicification">
+               <!-- #   target="_blank"  링크 클릭시 새탭으로 
+                    #   title="html5 sepicification" 클릭하기 전에 무엇인지 알려주고 싶다. 툴팁으로 설명-->
+                hyper text markup language
+            </a>
+        </p>
+
+        <hr>
+        <h1>WEB 사이트 완성</h1>
+        <h3>링크를 걸어 웹 페이지 이동을 실현시키며 웹의 이동경로를 배움</h3>
+        
+        <h4><a href="index.html">WEB</a></h4>
+
+        <ol><!-- Ordered List -->
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JavaScript</a></li>
+        </ol>
+
+
+    </body>
+</html>
