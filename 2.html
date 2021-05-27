@@ -1,11 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
 <head>
     <title>CSS</title>
+<meta charset='UTF-8'>
+<style>
+    body{
+        margin: 0px;
+    }
+    a {
+        color:  forestgreen;
+        font-weight: bold;
+        font-size: 16px;
+        text-decoration: none;
+    }
+    h1 {
+        font-size: 45px;
+        text-align: center;
+        border-bottom: 1px solid #555;
+        margin: 0;
+        padding: 20px;
+    }
+    ol {
+        border-right: 1px solid #555;
+        width: 150px;
+        margin: 0;
+        padding: 20px;
+        padding-left: 33px;
+        /* <!-- todo 항상 부피를 확인해가면서 파악 해야한다. 
+            <!--  todo ex) 왜 붙어있는지 , 왜 떨어져 있는지 확인 하고 설정해주기  */
+                /* ol 에 margin 값이  있길래  0 으로 바꿔 붙혀주고  padding 을 줘서 같은 간격으로 떨어트림.*/
+    }
+    #grid { /*  <!--  ID 값을 사용햇지만 #grid 인div 안에 있는 다른 태그들에게도 영향을 줄 수 있기 떄문에 
+            #grid 안에 있는 ol 에게만 적용   이럴떈 ==> #grid ol { }*/
+        display: grid;
+        grid-template-columns: 150px 1fr;
+    }
+    #grid #article { /* #grid 안에 있는 #article 만 적용 */
+        padding-left: 70px;
+    }
+    
+    @media(max-width:700px) {
+        #grid {
+            display: block;
+        }
+        ol  {
+            border-right: none;
+            
+        }
+        h1 { 
+            border-bottom: none;
+        }
+       #grid #article {  /*  <!-- ! 위에서 이미 #grid 안에이 있는 #article 으로 상세히 적용 했기 때문에
+                            <!-- ! 같게 적용 해야지 #article 로 할시 더 구체적이지 못하고 포괄적이기에 적용이 안됬었다. */
+            padding-left: 20px;
+        }
+
+    }
+</style>
 </head>
 <body>
-    <h1>CSS</h1>
-    <h3>CSS 페이지</h3>
-  
+    <h1>WEB</h1>
+    <div id="grid">
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ol>
+        <div id="article">
+            <h2>CSS</h2>
+            <p>Cascading  Style Sheets
+                <br>
+                <a href="https://developer.mozilla.org/ko/docs/Web/CSS">( CSS )</a>
+                Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor
+                 sit amet consectetur adipisicing elit. Iusto omnis, sunt adipisci numquam cupiditate quos quaerat fugiat placeat excepturi
+                 eveniet tenetur deleniti inventore quo natus non molestiae quisquam
+                 eligendi. Similique. adipisicing elit. Quibusdam quam, provident
+                 qui iure molestias sed nihil mollitia explicabo ipsa. Optio, soluta eos
+                 velit laboriosam animi autem quos. Ut, ab beatae.
+            </p>
+        </div>
+    </div>
 </body>
 </html>

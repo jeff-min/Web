@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+    <title>grid</title>
+    <style>
+        #grid {
+            border: 5px solid pink;
+            display :grid;
+            grid-template-columns: 150px 1fr;
+            /* <!-- # 첫번째 columns 150px를 갖고 나머지 columns 은 1fr
+                    # fr 이란  n분할기준으로  자동 조정  
+                    
+                    ! tip 새로 도입 되는 기술들은 데이터에 근거해서 사용 할 수 있는지 없는지 판단 해야한다.
+                    @   caniuse.com 여러 css, html , javascript 기술중에서 현재 웹 브라우저들이 얼마나 그 기술을 채택하고 있느가에 대한 통계
+                     */
+        }
+        div{
+            border:  5px solid #5555;
+        }
+    </style>
+</head>
+<body>
+    <!-- div 태그   - 디자인 할 수 있는 무색 무취와도 같은 박스태그  block-->
+    <!-- span 태그  - 디자인 할 수 있는 무색 무취와도 같은 박스태그  inline-->
+   <div id="grid">
+       <div>Navigation</div>
+       <div>Article</div>
+   </div>
+</body>
+</html>

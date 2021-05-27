@@ -2,9 +2,50 @@
 <html>
 <head>
     <title>HTML</title>
+    <meta charset="utf-8"> 
+    <link rel="stylesheet" href="style.css">
+    <!--  
+        # link 로 외부 파일을 가져올때  다운받아서 가져온다.
+        ? 여러개의 파일을 밖에 별도로 두고 다운 받아서 쓰는 것 VS 그냥 웹페이지 안에 css 코드를 내장하는 것 
+        ? 어떤것이 더 네트워크적인 측면에서 효율적일까?
+
+        # 웹페이지 안에 css 놓는 것이 사실 더 효율적이긴 하다. 
+        ! 하지만  캐싱으로 인해 그렇지 않게 된다.
+        $ 캐싱이란 : 저장하다 라는 뜻
+        
+        # 즉) 우리가 한번 style.css 라는 파일을 다운 받았다면 저 파일이 바뀌기 전까지는
+        #       style.css 란 파일을 이 웹브라우저는 우리의 컴퓨터에 저장 해놨다가 요청할 때마다 저장된 결과를 가져와서
+        
+        @ (네트워크를 안쓰기 때문에)속도를 높일 수 있고 
+        @ (코드의 양이 줄었기 때문에) 네트워크 트래픽(사업자들은) 사용로를 덜 쓸 수 있다.
+        todo 가급적 css 파일을 만들어 꺼내 사용해 중복을 제거해라  
+        todo 어떠한 언어든 극단적으로 생각해 불편한 작업 (중복적인)은 없애줘라
+
+    -->
+
 </head>
 <body>
-    <h1>HTML</h1>
-   
+    <h1>WEB</h1>
+    <div id="grid">
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ol>
+        <div id="article">
+            <h2>HTML</h2>
+            <p>HyperText Markup Language
+                <br>
+                <a href="https://www.w3.org/TR/html52/">( Html )</a>
+                Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor
+                 sit amet consectetur adipisicing elit. Iusto omnis, sunt adipisci numquam cupiditate quos quaerat fugiat placeat excepturi
+                 eveniet tenetur deleniti inventore quo natus non molestiae quisquam
+                 eligendi. Similique. adipisicing elit. Quibusdam quam, provident
+                 qui iure molestias sed nihil mollitia explicabo ipsa. Optio, soluta eos
+                 velit laboriosam animi autem quos. Ut, ab beatae.
+            </p>
+        </div>
+    </div>
 </body>
 </html>
+
