@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문 - loop_iterate</title>
+</head>
+<body>
+    <script>
+// <!--?    반복문 while         
+        /*
+            조건은 -     boolean 데이터 타입을 갖고 ture 기본출력 
+        while (조건){
+    반복해서 실행할 코드    // false 가 될 때 까지 반복 실행
+}
+        */
+    
+// <!-- code )        while(true){
+// <!-- code )            document.write('coding everybody <br />');
+// <!-- code )                }       
+
+// document 문서에  coding everybody 을 적어줌 
+// 실행하고 나니 while()은 또  ture 임 그럼 계속 무한 반복
+
+//<!-- @ 중요한점은 무한 loop 에 빠지면 웹페이지를 사용할 수 없음
+//<!-- so ) 적당한 시점 // 프로그래머가 원하는 시점에 false 빠질 수 있게 만들어줘야함
+
+    var i = 0;
+while(i < 10){
+    document.write('coding everybody '+i+' <br />');
+            // i의 값이 1씩 증가한다.
+            // i = i + 1 ;
+            i++
+}
+// while 반복문의 단점
+
+// i 라는 변수를 초기화         var i = 0;
+// 반복 조건                    i < 10
+// i 반복 실행                  i++
+
+// 세가지 덩어리들이 떨어져 있다는점.
+// 다른 코드들도 들어가게 되면 가독성도 떨어지게 되고  i 값을 건드릴 수 도 있기 때문
+
+// <!--? for
+// while 의 떨어진점을 // 하나의 문법적인 요소로 만든게 for 반복문
+
+for(var i = 0;  i<10 ; i++){    // 마지막은 세미클론 사용 x
+    document.write('coding everybody '+i+'<br />');
+}
+
+    i = 0
+    alert(++i);    //  1
+    //  앞에 ++ 는 먼저 1을 증가시킨후 i 값을 적용
+    
+    i = 0
+    alert(i++);    //  0
+    // i 를 사용하는 그 순간에는 기존값을 갖고 있던 0 을 사용하고
+    // alert()함수가 끝난 후에  i 는 1 증가 
+
+    //<!--# 관습적으로 반복적인 작업을 사용하는 기준점인 변수의 이름은 iterate 의 약자 i 를 쓴다.
+
+    
+// <!--?    반복문의 제어  - 반복문을 언제까지 반복하게 할 것인가.
+
+    for(var i = 0; i < 10; i++){
+    if(i === 5) {
+        break;      //  continue;
+    }
+    document.write('coding everybody'+i+'<br />');
+}
+
+//  break
+//  반복작업을 중간에 중단    ex )  - 5행까지만 출력
+
+//  continue
+//  실행을 즉시 중단 하면서 반복은 지속돼게 함 
+//  단  5행 에서 멈추고 다시 돌아가서 반복 하기 떄문에
+//  출력시 5 번째에 멈춘   coding everybody 5 는 출력이 되지 않음 
+
+// <!-- ?   반복문의 중첩
+
+    // 0부터 9까지 변수 i에 순차적으로 값을 할당        
+for(var i = 0; i < 10; i++){
+    // 0부터 9까지의 변수를 j의 값에 순차적으로 할당
+    for(var j = 0; j < 10; j++){    
+        // i와 j의 값을 더한 후에 출력
+
+        // String은 숫자인 i와 j의 데이터 타입을 문자로 형태를 변환하는 명령이다. 
+        // String()을 제거하고 실행해보면 의미가 좀 더 분명하게 드러날 것이다.
+        document.write(String(i)+String(j)+'<br />');
+        // document.write(i+j+'<br />');   - 이대로는 그저 숫자일뿐 그래서 수가 더해져서 나옴
+        // 즉 위에 코드 처럼 예시도
+// <!-- @   숫자 + 문자열  더하면 자바스클비트는 숫자를 문자의 데이터형식으로 자동으로 변환해준다.
+// <!-- #   이것과  string() 함수로 데이터 타입인 숫자를 문자 데이터 타입으로 바꿔 출력한것.
+        document.write('string'+i+j+'<br />')
+    }
+}
+
+    </script>
+</body>
+</html>

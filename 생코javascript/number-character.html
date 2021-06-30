@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자와 문자</title>
+</head>
+<body>
+    
+    <script>
+// <!--?    숫자
+        console.log(Math.pow(3,2)); //3의 2승 = 9
+        //  Math 안에 pow 라는 명령을 이용해 제곱을 사용함
+        // # Math 수학과 관련된 명령들의 카테고리 같은것 // 제곱의 해당하는 명령이 pow
+        console.log(Math.round(10.6));  // 10.6  반올림  = 11
+        console.log(Math.ceil(10.2));  // 10.2  수보다 높고 가까운 정수를 만듦   = 11
+        console.log(Math.floor(10.2));  // 10.2  아래쪽 정수로  만듦   = 10
+        console.log(Math.sqrt(9));  // 9의 제곱근  = 3
+        console.log(Math.random());  // 0 과 1 사이에 랜덤한 수
+
+// <!--?    문자
+        console.log('character');   // '' ,"" 작은따옴표나 큰 따옴표안에 넣어줘야함 // 문자라고 인식하게 해준다.
+        console.log('character\'s');   // \ 역슬래쉬는 특별한기호로 되어있음  = \ 뒤에 바로 오는것은 정보로 받아들인다.
+                                    // \' 역슬래쉬 뒤에 따옴표를 붙이는걸  == escape 라 한다.  // 원래 가지고 있는 '' 따옴표 임무로 부터 도망시킨다.
+
+        console.log(typeof  1);     // number
+        console.log(typeof  '1');   // string    문자열 = 여러들의 문자 집합을 칭함
+// <!--?     typeof  으로  타입을 알 수 있음
+        //  1  과  '1' 이 다라다는걸 알 수 있음.
+        // 숫자열과 문자열
+        
+        console.log('character\n\'s');      // \n 은 컴퓨터 내부에서 줄바꿈으로 약속되어져 있다.
+        
+        console.log('character'+'s');      // 문자와 문자와 더할 때
+        
+        console.log(1+1 +"\n"+'1'+'1');      // 당연히 숫자열 더하기와  // 문자열 더하기는 다르다.
+        
+        console.log("coding everybody".length);       //문자의 길이를 구할 때는 문자 뒤에 .length를 붙인다.
+
+        // 전체 목록에  -- >  클라이언트  -- > 자바스크립트 사전에 가면
+        // string , array , Math 등 객체와 관련된 명령어들의 리스트가 있음
+
+        console.log('character'.indexOf("h"));      // 1  문자열의 자리 찾기 
+    </script>
+</body>
+</html>

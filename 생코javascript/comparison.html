@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 비교 - comparison</title>
+</head>
+<body>
+    <script>
+// <!--?    연산자란
+        // 어떠한 작업을 위해 지시하기 위한 기호
+
+
+// <!--?    이항연산자란
+        //  좌항 과 우항 2개항을 결합한 연산자
+        // = 대입 연산자
+
+
+// <!--?    비교 연산자
+        // 프로그래밍에서 비교란 주어진 값들이 같은지, 다른지, 큰지, 작은지를 구분하는 것을 의미한다.
+        //  비교 연산자의 결과는 true나 false 중의 하나다
+        //   true와 false는 블린(boolean)이라고 불리는 데이터 형식  // 조건문에서 비중있게 다룰 것  
+
+
+    
+// <!--?      ==      동등 연산자     항값이 서로 같으면  (equal operator)
+        console.log(1 == "1");   //ture         - 실질적으로 갖는 정보의 의미가 같으면 인정
+// <!--?      ===      일치 연산자     항값이 서로 정확하게 같으면  (strict equal operator)
+        console.log(1 === "1");   //false
+                        // <!-- # 정보뿐만 아니라 데이터 형식까지 같아야함 string / number
+    
+    //<!-- @ 코딩에서 데이터 타입이 다르다는건 완전 다른 데이터이고 값자체가 다르기때문에
+    //<!-- @ == 쓸시 코딩하는데 자꾸 에러가 날 수 있다.  
+    //<!-- so ) 즉 ==  , === 차이가 있고 
+    //<!-- so ) === 명확하게 기준이 되어 있으니   === 을 정확하게 사용하는것이 좋다.
+
+    var a;
+    console.log(a);     // undefined  - 정의되지 않음.  // a 변수안에 어떠한 값도 존재 하지 않는다.
+        //<!-- # undefined  - 정의되지 않은 그냥 값자체가 없음 (의도 x)
+    var a = null;
+    console.log(a);     // null     - 값이 없음
+        //<!-- # null       - 프로그래머가 자신이 의도적으로 지정해서 값이 없는 상태를 만듦
+    console.log(undefined == null);     // ture
+    console.log(undefined === null);    // false
+
+    /*
+// <!--?    데이터타입이란
+        데이터의 성격에 따라 데이터를 카테고라이징 하는 데이터의 형식
+        string = "a", "b", "c" 문자열   // number  = 1 , 2 , 3
+        boolean =   ture / false 
+    */
+
+    //  undefined 와 null 가각이  데이터 타입이다.
+    //  undefined = undefined      //      null = null
+    
+    console.log(true == 1);               //true
+    // 동등 연산자에서  1 은 ture 로 간주함     ||      나머지 수는 false
+    console.log(true === 1);              //false
+    console.log(true == '1');             //true
+    // 동등 연산자에서 숫자 1 은 ture 로 간주함     ||      나머지 수는 false
+    console.log(true === '1');            //false
+
+    console.log(0 === -0);                //true
+    console.log(NaN === NaN);             //false
+    //  NaN 이란 성립하지 않는 수  
+    console.log(0/0);                    // NaN
+
+
+    //  ! (느낌표)  부정의 의미
+    //  같다'의 부정은 '같지 않다'이다. 이것을 기호로는 '!='로 표시한다
+    console.log(1!=2);            //true
+    console.log(1!=1);            //false
+    </script>
+</body>
+</html>

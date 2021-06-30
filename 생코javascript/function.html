@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 - function</title>
+</head>
+<body>
+    <script>
+        //<!-- ?   함수 형식
+//<!-- code )        function 함수명( [인자...[,인자]] ){
+//<!-- code )            코드
+//<!-- code )            return 반환값
+//<!-- code )                }
+
+//<!-- ?    함수(function)란 하나의 로직을 재실행 할 수 있도록 하는 것으로 코드의 재사용성을 높여준다.
+    function numbering(){
+    var i = 0;
+    while(i < 10){
+        document.write(i +"<br>");
+        i += 1;
+    }   
+}
+    // numbering();
+    for(i=0; i<10; i++){
+        numbering();
+    }
+    // 이런식으로 미리짠 로직을 함수를 호출해 사용하는것..
+    
+    
+    //  반복문이 가지고있는 효용과 함수가 갖는 효용은 다르다.
+//<!-- #    for 반복문은 기계적으로 일정한 반복을 그자리에서 실행할때 의미가 있음.
+            // 즉 반복문은  실행한 자리에서만 반복이지만
+//<!-- #    function 함수는 반복적으로 실행되는 로직이 여러가지 맥락에서  사용되어야 될 때 의미가 있음.
+            // 즉 함수는 여기저기서 호출만 하면 필요한대서 사용 할 수 있음
+//<!-- @    함수는 로직을 여러방면에서 사용할 수 있는 - 재사용성이 가장 중요   == > 유지보수가 용이하다.          
+
+
+//<!-- ?  return
+//<!-- ?  함수 내에서 사용한 return은 return 뒤에 따라오는 값을 함수의 결과로 반환한다.동시에 함수를 종료시킨다. 
+
+    function get_member1(){
+    return 'egoing';
+    return '1234';
+    return 'jeff';
+}
+
+function get_member2(){
+    return 'k8805';
+}
+
+alert(get_member1());   //  egoing
+alert(get_member2());   //  k8805
+
+//  return 'egoing'을 실행한 후에 함수가 종료되었기 때문에 egoing 만 출력
+
+                //<!-- #   (arg) - 입력과 관련됌    - 매개변수 (parameter)
+function get_argument(arg){
+    return arg;   //<!-- #   return - 출력과 관련됌
+}
+
+alert(get_argument(1)); // 1  - arg에 넣어주는 입력과 관련   <!-- # arg 로 전달한 (1)값들은  - 인자 (argument)
+    //get_argument() 함수를 호출할때 () 안에다가 1 라는 숫자를 넣어준다.
+    // 1 이들어갈 자리에 arg 가 있다.
+    // 그렇다면 arg 라는건 변수가 된다.
+    // arg = 1      
+// <!-- so ) 로직에  return arg;  는 1이 된다.
+alert(get_argument(2)); // 2
+    // arg = 2 
+
+
+    //복수의 인자
+    function get_arguments(arg1, arg2){     //<!-- #  여러개의 인자 값을 받을 수 있다.
+    return arg1 + arg2
+}
+
+alert(get_arguments(10, 20));
+alert(get_arguments(20, 30));
+
+//<!-- ? 함수를 정의 하는 다른 방법
+    var numbering = function (){
+    i = 0;
+    while(i < 10){
+        document.write(i);
+        i += 1;
+    }   
+}
+numbering();
+//function 이  numbering 에 대입됨 
+// numbering이 함수를 갖게됨
+//<!-- @ 함수호출은 () ; 가 필요  / 없으면 자바스크립트 해독기는 변수로 생각할테니.
+
+    // 두번쨰
+    (function (){
+    i = 0;
+    while(i < 10){
+        document.write(i);
+        i += 1;
+    }   
+}) ();
+//<!-- # function 을 () 묶어주고 바로 (); 실행 시켜줌 - 익명 함수
+//<!-- #    이름이 필요 없고 바로 실행 해야할 때 간혹 사용한다는데 굳이 쓸 필요 x
+    
+    </script>
+</body>
+</html>
